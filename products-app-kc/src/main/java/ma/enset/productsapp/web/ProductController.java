@@ -61,7 +61,8 @@ public class ProductController {
 
     @ExceptionHandler(Exception.class)
     public String exceptionHandler(Exception e, Model model) { // ne pas afficher les exceptions au client
-        model.addAttribute("errorMessage", e.getMessage());
+        // model.addAttribute("errorMessage", e.getMessage());
+        model.addAttribute("errorMessage", "Problème d'authorisation");
         return "errors"; // retourner la page errors
     }
 
